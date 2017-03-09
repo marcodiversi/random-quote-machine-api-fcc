@@ -17,7 +17,7 @@ $(document).ready(function() {
 		var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodedQuote;
 		$('#quote-box').text(data.quote);
 		$('#autore').text(data.author);
-		$('#twitter').attr('href', tweetUrl);
+		$('.twitter-share-button').attr('href', tweetUrl);
 	};
 	
 	$('#quote').on('click', function() {

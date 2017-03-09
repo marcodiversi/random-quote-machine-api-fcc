@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Quote Machine API FCC</title>
-  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
@@ -13,12 +15,12 @@
 </head>
 
 <body>
-  <!-- load bootstrap and jquery from settings-->
+  <!-- load bootstrap and jquery from settings and FA-->
 
 <div class="container">
 <div class="row">
 <div  class="box col-md-12">
-<p id ="quote-box" class="text-center"></p>
+<p id ="quote-box" class="text-center">Nice Quotes From All Over The World.</p>
 </div>
 </div>
 </div>
@@ -26,25 +28,81 @@
 <div class="container">
 <div class="row">
 <div class="box-footer col-lg-2 col-md-2 col-xs-2">
-<p id ="quote" class="btn btn-default center-block">New Quote</p>
+<p id ="quote" class="btn btn-primary center-block btnReload">New Quote</p>
 </div>
    
 <div id ="twitter" class="box-footer col-lg-2 col-md-2 col-xs-2">
-<a class="twitter-share-button btn btn-default center-block" href="https://twitter.com/intent/tweet" target="blank">
+<a class="twitter-share-button btn btn-primary center-block" href="https://twitter.com/intent/tweet?text="+quote-box target="blank">
 Tweet</a>
 </div>
   
 <div class="box-aut col-lg-4 col-md-4 col-xs-4">
-<p id="autore" class="text-center"><p/>
+<p id="autore" class="text-center">Author<p/>
 </div>
 </div>
 </div>
+<br><br><br><br><br><br><br><br><br>
 
-<hr>
 
-<footer>
-<a href="https://marcodiversi.com" target="_blank"><h2 class="text-center"> Marco Diversi</h2></a>
-</footer>
+
+
+
+<!--theme below-->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>Wherever you need me.<br>
+                           Planet Earth</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>SAY HI, IT'S FREE!</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="tel:+32486759717" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-phone"></i></a>
+                            </li>
+                            <li>
+                                <a href="/cdn-cgi/l/email-protection#4924283b2a262d203f2c3b3a20092e24282025672a2624" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/marcodiversi" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                              <li>
+                                <a href="https://twitter.com/marcodiversi" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.paypal.me/marcodiversi" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-paypal"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/diversimarco/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/marcodiversi/en" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.marcodiversi.com/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-globe"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Marco Diversi</h3>
+                        <p>Feel free to Contact me at any time. <br> &larr; If you like my articles feel free to donate, hit the <a href="https://www.paypal.me/marcodiversi" target="_blank">PayPalMe</a> button. <br>1$ is fine too.<a href=""></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Marco Diversi 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 

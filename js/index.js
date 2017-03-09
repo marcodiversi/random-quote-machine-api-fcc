@@ -1,17 +1,31 @@
-var url = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
-
-var getQuote = function(data) {
-  $("#quote-box").text(data.quoteText);
-  var quot = 'https://twitter.com/intent/tweet?text=' + data.quoteText + ' Author ' + data.quoteAuthor;
-  if (data.quoteAuthor === '') {
-    data.quoteAuthor = 'Unknown';
-  }
-  $("#autore").text('Author: ' + data.quoteAuthor);
-  $(".twitter-share-button").attr("href", quot);
-};
 $(document).ready(function() {
-  $.getJSON(url, getQuote, 'jsonp');
-});
-$("#quote").click(function() {
-  $.getJSON(url, getQuote, 'jsonp');
+
+	var getQuote = function() {
+		return $.ajax({
+			url: 'https://andruxnet-random-famous-quotes.p.mashape.com/',
+			headers: {
+				'X-Mashape-Key': 'MUzqdeOSo1mshCuear7hljNznBWrp1N5SPTjsngfXZ9xvMJ9dv'
+			},
+			method: 'POST',
+			contentType: 'application/x-www-form-urlencoded',
+			dataType: 'json',
+		})
+	};
+  
+  var setQuote = function(data) {
+		var encodedQuote = encodeURIComponent(data.quote);
+		var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodedQuote;
+		$('#quote-box').text(data.quote);
+		$('#autore').text(data.author);
+		$('#twitter').attr('href', tweetUrl);
+	};
+	
+	$('#quote').on('click', function() {
+		var reloadBtn = $(this);
+		reloadBtn.prop('disabled', true).children('i');
+		getQuote().done(function(data) {
+			setQuote(data);
+			reloadBtn.prop('disabled', false).children('i');
+		});
+	});
 });
